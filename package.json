@@ -1,0 +1,50 @@
+{
+  "name": "fe-solutions",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "lint": "eslint --ext .js,.ts packages",
+    "lint:fix": "eslint --fix --ext .js,.ts packages",
+    "clean": "rimraf lib",
+    "prepare": "npx husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zh-shan/fe-solutions.git"
+  },
+  "author": "zhs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zh-shan/fe-solutions/issues"
+  },
+  "homepage": "https://github.com/zh-shan/fe-solutions#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "packages/**/*.{js,ts}": [
+      "eslint"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "cz-customizable": "^7.0.0",
+    "eslint": "^8.30.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.9.4"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
